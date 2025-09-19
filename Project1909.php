@@ -10,6 +10,7 @@ private $nmedia;
 private function __construct($materia, $professor, $lab, $nalunos, $nmedia) {
     $this->setMateria($materia);
     $this->setProfessor($professor);
+    $this-> lab = $lab;
     $this->setNalunos($nalunos);
     $this->setNmedia($nmedia);
 
@@ -32,6 +33,22 @@ private function setNmedia ($nmedia) {
     $this->nmedia = number_format($nmedia, 2,);
 }
 
+private function getMateria () {
+    return $this->materia;
+}
+private function getProfessor () {
+    return $this->professor;
+}
+
+private function getNalunos () {
+    return $this->nalunos;
+}
+
+
+private function getNmedia () {
+    return $this->nmedia;
+}
+
 public function ativar ($ativar) {
     if ($ativar == true) {
         echo "Essa disciplina esta ativa";
@@ -52,13 +69,19 @@ public function obrigatoria ($obrigatoria) {
 
 
 else {
-    
+
     echo "Essa matéria não é obrigatória";
     
 
 }
 }
 
-
-
 }
+
+
+$disciplina1 = new Disciplina ("POO",  "Samuel", "Sala-01", 40, 6);
+$disciplina1 = new Disciplina ("Internet Das Coisas",  "Bruno", "Sala-IOT", 20, 6);
+
+
+
+
