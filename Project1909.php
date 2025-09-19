@@ -43,6 +43,22 @@ public function ativar ($ativar) {
     }
 }
 
+public function obrigatoria ($obrigatoria) {
+    if ($obrigatoria == true) {
+        echo "Essa matéria é obrigatória";
+
+    }
+    
+
+
+else {
+    
+    echo "Essa matéria não é obrigatória";
+    
+
+}
+}
+
 
 
 }
