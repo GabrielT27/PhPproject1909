@@ -19,31 +19,28 @@ private function __construct($materia, $professor, $lab, $nalunos, $nmedia) {
 private function setMateria ($materia) {
     $this->materia = ucwords(strtolower($materia));
 }
+private function getMateria () {
+    return $this->materia;
+}
 
 private function setProfessor ($professor) {
     $this->professor = ucwords(strtolower($professor));
 
+}
+private function getProfessor () {
+    return $this->professor;
 }
 
 private function setNalunos ($nalunos) {
     $this->nalunos = abs($nalunos);
 }
 
-private function setNmedia ($nmedia) {
-    $this->nmedia = number_format($nmedia, 2,);
-}
-
-private function getMateria () {
-    return $this->materia;
-}
-private function getProfessor () {
-    return $this->professor;
-}
-
 private function getNalunos () {
     return $this->nalunos;
 }
-
+private function setNmedia ($nmedia) {
+    $this->nmedia = number_format($nmedia, 2,);
+}
 
 private function getNmedia () {
     return $this->nmedia;
