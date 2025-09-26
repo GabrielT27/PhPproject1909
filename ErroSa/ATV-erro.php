@@ -1,4 +1,4 @@
-<!--  -->
+<!--Código w erro -->
 
 <?php 
 class disciplina {
@@ -25,7 +25,7 @@ private function getMateria () {
 }
 
 private function setProfessor ($professor) {
-    $this->professor = ucwords(strtolower($professor));
+    $this->professor = ucwords(strtolower $professor));
 }
 private function getProfessor () {
     return $this->professor;
@@ -38,7 +38,7 @@ private function getNalunos () {
     return $this->nalunos;
 }
 
-private function setNmedia ($nmedia) {
+public function setNmedia ($nmedia) {
     $this->nmedia = number_format($nmedia, 2, '.', '');
 }
 private function getNmedia () {
@@ -55,7 +55,7 @@ public function ativar ($ativar) {
 }
 
 public function obrigatoria ($obrigatoria) {
-    if($obrigatoria == true) {
+    if($obrigatoria = true) {
         echo "Essa matéria é obrigatória";
     } else {
         echo "Essa matéria não é obrigatória";
